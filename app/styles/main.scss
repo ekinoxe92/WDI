@@ -9,7 +9,11 @@ $cookie : #bf8e62;
 $poo : #73563b;
 $sizebtn: 50px;
 
-
+.descriptif{
+  margin-left: 10px;
+  border-left: 2px solid #CCC;
+  padding-left: 20px;
+}
 .content{
   margin-bottom: $sizebtn+20 ;
 }
