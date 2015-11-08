@@ -1,17 +1,25 @@
+// import compass library
 @import "compass/css3/appearance";
+@import "compass/css3/transform";
+@import "compass/layout/stretching";
+@import "compass/css3/font-face";
+
+
+// import other scss file
+@import "font";
+@import "variable";
+@import "navigation";
+
 
 // bower:scss
 // endbower
 
-// Variables
-$biscuit : #a67a64;
-$cookie : #bf8e62;
-$poo : #73563b;
-$sizebtn: 50px;
-
-
 .content{
   margin-bottom: $sizebtn+20 ;
+}
+body {
+  font-family: 'avenir55';
+  font-size: 14px;
 }
 .center{
   text-align: center;
@@ -41,9 +49,8 @@ body {
 
 form > input {
   display: block;
-  border-top:none;
-  border-left:none;
-  border-right:none;
+  border: none;
+  border-bottom: 1px solid $elephant;
   margin: 20px 0px;
   width: 100%;
   font-size: 16px
@@ -106,36 +113,12 @@ select{
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.mainly {
+  @include stretch;
 }
-
-/* Responsive: Mobile */
-@media screen and (max-width: 600px){
 
 select{
   width: 100%;
   font-size: 16px
-}
-
 }
 
