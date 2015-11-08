@@ -1,17 +1,58 @@
+@import "compass/css3/appearance";
+
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+// Variables
+$biscuit : #a67a64;
+$cookie : #bf8e62;
+$poo : #73563b;
+$sizebtn: 50px;
+
+
+.content{
+  margin-bottom: $sizebtn+20 ;
 }
+.center{
+  text-align: center;
+}
+.btn{
+
+  @include appearance(none);
+  position:fixed;
+  top:100%;
+  left:0;
+  right:0;
+  height: $sizebtn;
+  margin-top: -$sizebtn;
+  width: 100%;
+  border:none;
+  color:#fff;
+
+  &.subscribe-btn {
+    background: $biscuit;
+  }
+}
+
 
 body {
   padding: 0;
 }
 
+form > input {
+  display: block;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  margin: 20px 0px;
+  width: 100%;
+  font-size: 16px
+}
+
+select{
+  width: 50%;
+  font-size: 16px
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -87,3 +128,14 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Responsive: Mobile */
+@media screen and (max-width: 600px){
+
+select{
+  width: 100%;
+  font-size: 16px
+}
+
+}
+
