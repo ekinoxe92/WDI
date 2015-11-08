@@ -1,13 +1,16 @@
 <ng-include src="'views/partial/nav.html'"></ng-include>
 <ng-include src="'views/partial/header.html'"></ng-include>
 <div class="page-content" ng-class="{'inactive': open}">
-	<h1>CONTACT</h1>
-	<p>Entrez vos informations personnelles</p>
-	<span class="subscribe-logo"></span>
-
-	<form class="subscribe-form">
-		<input type="email" name="email" placeholder="Email" ng-model="email"/>
-		<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="plaque"/>
-		<button ng-click="submit()">ENVOYER</button>
-	</form>
+	<h1 class="center title">CONTACT</h1>
+	<p class="center desc">Une question ? Nous sommes là pour y répondre.</p>
+	<div class="wrapper-center">
+		<span class="subscribe-logo"></span>
+	</div>
+	<div class="wrapper-border">
+		<form class="subscribe-form">
+			<input type="email" name="email" placeholder="Email" ng-model="email"/>
+			<textarea name="message" placeholder="Votre message"></textarea>	
+			<button ng-click="submit()" class="btn">ENVOYER</button>
+		</form>
+	</div>	
 </div>

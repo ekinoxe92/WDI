@@ -49,6 +49,12 @@ body {
 
   &.subscribe-btn {
     background: $biscuit;
+  }  
+  &.witness-btn {
+    background: $cookie;
+  }  
+  &.history-btn {
+    background: $poo;
   }
 }
 
@@ -73,6 +79,14 @@ form > input {
   &:focus {
     outline: 0;
   }
+}
+
+textarea{
+  width: 100%;
+  border:1px solid $mouse;
+  font-size: 16px;
+  outline: 0;
+  padding: 5px;  
 }
 
 select{
@@ -118,11 +132,40 @@ select{
   padding: 20px;
 }
 
-.subscribe-logo {
+/* page about */
+.about{
+  line-height: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+/* page about*/
+.subscribe-logo{
   background: url(../images/plume.png) no-repeat center center;
   background-size: cover;
   width: $icon-size / 2;
   height: $icon-size / 2;
   display: inline-block;
   text-align: center;
+}
+.witness-logo{
+  background: url(../images/letter.png) no-repeat center center;
+  background-size: cover;
+  width: $icon-size / 2;
+  height: $icon-size / 2;
+  display: inline-block;
+  text-align: center;
+}
+.history-logo{
+  background: url(../images/folder.png) no-repeat center center;
+  background-size: cover;
+  width: $icon-size / 2;
+  height: $icon-size / 2;
+  display: inline-block;
+  text-align: center;
+}
+
+.envoyer-btn{
+  width: 100%;
+  background: #000;
+  color:#FFF
 }

@@ -1,17 +1,20 @@
 <ng-include src="'views/partial/nav.html'"></ng-include>
 <ng-include src="'views/partial/header.html'"></ng-include>
 <div class="page-content" ng-class="{'inactive': open}">
-	<h1>ARCHIVES</h1>
-	<p>Entrez vos informations personnelles</p>
-	<span class="subscribe-logo"></span>
-
-	<form class="subscribe-form">
-		<input type="email" name="email" placeholder="Email" ng-model="email"/>
-		<ul class="dots">
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-		<button ng-click="submit()">TROUVER</button>
-	</form>
+	<h1 class="center title">HISTORIQUE</h1>
+	<p class="center desc">Cette page vous permettra de lister tous les véhicules liés à votre adresse-email</p>
+	<div class="wrapper-center">
+		<span class="history-logo"></span>
+	</div>
+	<div class="wrapper-border">	
+		<form class="subscribe-form">
+			<input type="email" name="email" placeholder="Email" ng-model="email"/>
+			<ul class="dots turnon-{{currentPage}}">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<button ng-click="submit()" class="btn history-btn">LISTER</button>
+		</form>
+	</div>
 </div>
