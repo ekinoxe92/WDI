@@ -7,11 +7,19 @@
  * # SubscribeCtrl
  * Controller of the wdiApp
  */
-angular.module('wdiApp')
-  .controller('SubscribeCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+ angular.module('wdiApp')
+ .controller('SubscribeCtrl', function ($scope, $http) {
+
+ 	$scope.submit = function(){
+ 		var get_data = {
+ 			user: $scope.user,
+ 			car: $scope.car
+ 		};
+ 		$http.post('http://api.whodidit.fr/users', get_data).then(function(data){
+ 			console.log(data);
+ 		}, function(error){
+ 			console.log(error);
+ 		});
+ 		return false;
+ 	}
+ });

@@ -50,4 +50,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  }).run(function($rootScope){
+    $rootScope.open = false;
+    $rootScope.toggleNavigation = function(){
+      $rootScope.open = !$rootScope.open;
+    };
   });

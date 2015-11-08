@@ -3,6 +3,7 @@
 @import "compass/css3/transform";
 @import "compass/layout/stretching";
 @import "compass/css3/font-face";
+@import "compass/css3/transition";
 
 
 // import other scss file
@@ -46,6 +47,10 @@ body {
   &.subscribe-btn {
     background: $biscuit;
   }
+}
+
+.content {
+  
 }
 
 
