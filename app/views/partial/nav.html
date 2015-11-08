@@ -1,21 +1,12 @@
+<button class="close" ng-click="toggleNavigation()">CLOSE</button>
 <div class="navigation" ng-class="{'active': open}">
-	<div class="navbar navbar-default" role="navigation">
-		<div class="container">
-			<div class="collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#/">Accueil</a></li>
-					<li><a ng-href="#/subscribe">Inscription</a></li>
-					<li><a ng-href="#/witness">Témoin</a></li>
-					<li><a ng-href="#/history">Historique</a></li>
-					<li><a ng-href="#/about">Qui sommes nous</a></li>
-					<li><a ng-href="#/contact">Contact</a></li>
-				</ul>
-				<button class="close" ng-click="toggleNavigation()">CLOSE</button>
-			</div>
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#/">WHO DID IT</a>
-			</div>
-		</div>
-	</div>
+	<ul class="nav navbar-nav">
+		<li class="active"><a href="#/">Accueil</a></li>
+		<li><a ng-href="#/subscribe">Inscription</a></li>
+		<li><a ng-href="#/witness">Témoin</a></li>
+		<li><a ng-href="#/history">Historique</a></li>
+		<li><a ng-href="#/about">Qui sommes nous</a></li>
+		<li><a ng-href="#/contact">Contact</a></li>
+	</ul>
 </div>
 

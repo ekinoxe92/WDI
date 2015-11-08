@@ -4,12 +4,15 @@
 @import "compass/layout/stretching";
 @import "compass/css3/font-face";
 @import "compass/css3/transition";
+@import "compass/css3/border-radius";
 
 
 // import other scss file
+@import "reset";
 @import "font";
 @import "variable";
 @import "navigation";
+@import "medias";
 
 .descriptif{
   margin-left: 10px;
@@ -61,68 +64,28 @@ body {
 form > input {
   display: block;
   border: none;
-  border-bottom: 1px solid $elephant;
+  border-bottom: 1px solid $mouse;
   margin: 20px 0px;
   width: 100%;
-  font-size: 16px
+  font-size: 16px;
+  outline: 0;
+  padding: 5px;
+  &:focus {
+    outline: 0;
+  }
 }
 
 select{
   width: 50%;
   font-size: 16px
 }
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
 
 .mainly {
   @include stretch;
@@ -133,3 +96,33 @@ select{
   font-size: 16px
 }
 
+.title {
+  margin: 0;
+  padding: 20px;
+  font-size: 22px;
+
+}
+
+.desc {
+  font-family: 'avenir35';
+  font-size: 16px;
+  color: $elephant;
+  margin: 0;
+}
+
+/* Subscribe page*/
+.wrapper-center {
+  text-align: center;
+}
+.wrapper-border {
+  padding: 20px;
+}
+
+.subscribe-logo {
+  background: url(../images/plume.png) no-repeat center center;
+  background-size: cover;
+  width: $icon-size / 2;
+  height: $icon-size / 2;
+  display: inline-block;
+  text-align: center;
+}

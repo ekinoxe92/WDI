@@ -1,23 +1,24 @@
 <ng-include src="'views/partial/nav.html'"></ng-include>
 <ng-include src="'views/partial/header.html'"></ng-include>
 <div class="page-content" ng-class="{'inactive': open}">
-	<h1 class="center">INSCRIPTION</h1>
-	<p class="center">Entrez vos informations personnelles</p>
-	<span class="subscribe-logo"></span>
-
-	<form class="subscribe-form">
-		<input type="text" name="lastname" placeholder="Nom" ng-model="user.lastname"/>
-		<input type="text" name="firstname" placeholder="Prénom" ng-model="user.firstname"/>
-		<input type="email" name="email" placeholder="Email" ng-model="user.email"/>
-		<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="car.registration_number"/>
-		<select name="pays">
-			<option value="FRANCE">FRANCE</option>
-		</select>
-		<ul class="dots">
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-		<button ng-click="submit()" class="btn subscribe-btn">ENREGISTRER</button>
-	</form>
+	<h1 class="center title">INSCRIPTION</h1>
+	<p class="center desc">Entrez vos informations personnelles</p>
+	<div class="wrapper-center">
+		<span class="subscribe-logo"></span>
+	</div>
+	<div class="wrapper-border">
+		<form class="subscribe-form">
+			<input type="text" name="lastname" placeholder="Nom" ng-model="user.lastname"/>
+			<input type="text" name="firstname" placeholder="Prénom" ng-model="user.firstname"/>
+			<input type="email" name="email" placeholder="Email" ng-model="user.email"/>
+			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="car.registration_number"/>
+			<ng-include src="'views/partial/select-country.html'"></ng-include>
+			<ul class="dots turnon-{{currentPage}}">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>	
+			<button ng-click="submit()" class="btn subscribe-btn">ENREGISTRER</button>
+		</form>
+	</div>
 </div>

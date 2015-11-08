@@ -10,6 +10,8 @@
  angular.module('wdiApp')
  .controller('SubscribeCtrl', function ($scope, $http) {
 
+ 	$scope.currentPage =  1;
+
  	$scope.submit = function(){
  		var get_data = {
  			user: $scope.user,
