@@ -17,8 +17,10 @@
  		};
  		$http.post('http://api.whodidit.fr/users', get_data).then(function(data){
  			console.log(data);
+ 			$scope.car.registration_number = '';
  		}, function(error){
  			console.log(error);
+ 			alert('Une erreur est survenue !');
  		});
  		return false;
  	}
