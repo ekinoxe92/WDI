@@ -29,21 +29,12 @@
  			user: $scope.user,
  			car: $scope.car
  		};
- 		$http({
- 			method:'POST',
- 			url:'http://api.whodidit.fr/users',
- 			data: get_data,
- 			headers: {
- 				"Content-Type": "application/json",
- 				"Accept": "application/json"
- 			}
- 		}).then(function(data){
- 			console.log(data);
- 			$scope.car.registration_number = '';
+
+ 		$http.post('http://api.whodidit.fr/users', get_data).then(function(success){
+ 			console.log(success);
  		}, function(error){
- 			console.log(error);
- 			alert('Une erreur est survenue !');
+ 			console.log('error');
  		});
- 		return false;
+
  	}
  });
