@@ -8,10 +8,6 @@
  * Controller of the wdiApp
  */
 angular.module('wdiApp')
-  .controller('WitnessCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('WitnessCtrl', function ($scope) {
+ 	$scope.currentPage =  2;
   });

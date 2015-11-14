@@ -8,10 +8,7 @@
  * Controller of the wdiApp
  */
 angular.module('wdiApp')
-  .controller('HistoryCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('HistoryCtrl', function ($scope) {
+ 	$scope.currentPage =  3;
+
   });

@@ -51,8 +51,14 @@ angular
         redirectTo: '/'
       });
   }).run(function($rootScope){
-    $rootScope.open = false;
     $rootScope.toggleNavigation = function(){
       $rootScope.open = !$rootScope.open;
     };
+    $rootScope.$on("$routeChangeStart", function (event, next, current) {
+      $rootScope.open = false;
+    });
+  
+
+  
+
   });

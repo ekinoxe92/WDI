@@ -1,4 +1,10 @@
-<div class="header-top">
-	<button class="plus nav-top" ng-click="toggleNavigation()" ></button>
+<div class="overlay" ng-class="{'inactive': open}" ng-click="toggleNavigation()"></div>
+<div class="header-top" ng-class="{'inactive': open}">
+
+	<button class="c-hamburger c-hamburger--htx" ng-class="{'is-active': open}" ng-click="toggleNavigation()">
+	  <span>toggle menu</span>
+	</button>
+
+
 	<span class="baseline">WHO DID IT</span>
 </div>

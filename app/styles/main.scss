@@ -15,9 +15,16 @@
 @import "medias";
 
 .descriptif{
-  margin-left: 10px;
+  margin:10px;
   border-left: 2px solid #CCC;
   padding-left: 20px;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.descriptif blokequote{
+  line-height: 20px;
 }
 
 // bower:scss
@@ -35,14 +42,13 @@ body {
   text-align: center;
 }
 .btn{
-
+  cursor: pointer;
+  margin-top: 20px;
   @include appearance(none);
-  position:fixed;
-  top:100%;
   left:0;
   right:0;
+  bottom:0;
   height: $sizebtn;
-  margin-top: -$sizebtn;
   width: 100%;
   border:none;
   color:#fff;
@@ -75,7 +81,7 @@ form > input {
   width: 100%;
   font-size: 16px;
   outline: 0;
-  padding: 5px;
+  padding: 5px 0;
   &:focus {
     outline: 0;
   }
@@ -102,7 +108,7 @@ select{
 
 
 .mainly {
-  @include stretch;
+  
 }
 
 select{
@@ -112,14 +118,14 @@ select{
 
 .title {
   margin: 0;
-  padding: 20px;
+  padding: 40px 0 0 0;
   font-size: 22px;
 
 }
 
 .desc {
   font-family: 'avenir35';
-  font-size: 16px;
+  font-size: 13px;
   color: $elephant;
   margin: 0;
 }
@@ -146,6 +152,7 @@ select{
   height: $icon-size / 2;
   display: inline-block;
   text-align: center;
+  margin:10px;
 }
 .witness-logo{
   background: url(../images/letter.png) no-repeat center center;
@@ -154,6 +161,7 @@ select{
   height: $icon-size / 2;
   display: inline-block;
   text-align: center;
+  margin:10px;
 }
 .history-logo{
   background: url(../images/folder.png) no-repeat center center;
@@ -162,10 +170,28 @@ select{
   height: $icon-size / 2;
   display: inline-block;
   text-align: center;
+  margin:10px;
 }
 
 .envoyer-btn{
   width: 100%;
   background: #000;
   color:#FFF
+}
+
+.owl-image{
+  position: absolute;
+  bottom: 50px;
+  width: 80%;
+  left:0;
+  text-align: center;
+}
+
+.about a{
+  display: inline-block;
+  color:#000;
+  font-weight: bold;
+}
+.about{
+  text-align: justify;
 }

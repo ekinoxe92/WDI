@@ -8,17 +8,17 @@
 	</div>
 	<div class="wrapper-border">
 		<form class="subscribe-form">
-			<input type="text" name="lastname" placeholder="Nom" ng-model="user.lastname"/>
-			<input type="text" name="firstname" placeholder="Prénom" ng-model="user.firstname"/>
-			<input type="email" name="email" placeholder="Email" ng-model="user.email"/>
-			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="car.registration_number"/>
-			<ng-include src="'views/partial/select-country.html'"></ng-include>
+			<input type="text" name="lastname" placeholder="Nom" ng-model="user.lastname" required/>
+			<input type="text" name="firstname" placeholder="Prénom" ng-model="user.firstname" required/>
+			<input type="email" name="email" placeholder="Email" ng-model="user.email" required/>
+			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="car.registration_number" required/>
+			<select ng-model="country" ng-options="item as item.label for item in countrylist"></select>
+			<button class="btn subscribe-btn" ng-click="submit()">ENREGISTRER</button>
 			<ul class="dots turnon-{{currentPage}}">
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>	
-			<button ng-click="submit()" class="btn subscribe-btn">ENREGISTRER</button>
 		</form>
 	</div>
 </div>
