@@ -10,9 +10,9 @@
 angular.module('wdiApp')
   .controller('HistoryCtrl', function ($scope, $http) {
  	$scope.currentPage =  3;
- 		$http.get('http://api.whodidit.fr/alerts?user[email]=rudy@oxyum.fr').then(function(success){
+ 		/*$http.get('http://api.whodidit.fr/alerts?user[email]=huynh.pascal@gmail.com').then(function(success){
  			console.log(success);
  		}, function(error){
  			console.log('error');
- 		});
+ 		});*/
   });

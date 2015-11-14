@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'hmTouchEvents'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -50,7 +51,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  }).run(function($rootScope){
+  }).run(function($rootScope, $location){
     $rootScope.toggleNavigation = function(){
       $rootScope.open = !$rootScope.open;
     };
@@ -58,6 +59,11 @@ angular
       $rootScope.open = false;
     });
   
+
+  
+  $rootScope.redirect = function(url){
+    $location.path('/' + url);
+  };
 
   
 

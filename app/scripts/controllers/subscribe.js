@@ -22,7 +22,6 @@
 
  	});
 
-
  	$scope.submit = function(){
  		$scope.user["country"] = $scope.country.iso;
  		var get_data = {
