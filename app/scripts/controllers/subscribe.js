@@ -38,12 +38,12 @@
  				"Accept": "application/json"
  			}
  		}).then(function(data){
- 				console.log(data);
- 				$scope.car.registration_number = '';
- 			}, function(error){
- 				console.log(error);
- 				alert('Une erreur est survenue !');
- 			});
- 			return false;
- 		}
- 	});
+ 			console.log(data);
+ 			$scope.car.registration_number = '';
+ 		}, function(error){
+ 			console.log(error);
+ 			alert('Une erreur est survenue !');
+ 		});
+ 		return false;
+ 	}
+ });
