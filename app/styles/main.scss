@@ -127,9 +127,10 @@ select{
 
 .desc {
   font-family: 'avenir35';
-  font-size: 13px;
   color: $elephant;
   margin: 0;
+  padding: 0 10px;
+  text-align: center;
 }
 
 /* Subscribe page*/
