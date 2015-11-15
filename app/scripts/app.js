@@ -16,6 +16,7 @@ angular
     'ngTouch',
     'hmTouchEvents'
   ])
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

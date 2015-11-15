@@ -8,12 +8,12 @@
 	</div>
 	<div class="wrapper-border">
 		<form class="subscribe-form">
-			<input type="text" name="lastname" placeholder="Nom" ng-model="user.lastname" required/>
 			<input type="text" name="firstname" placeholder="Prénom" ng-model="user.firstname" required/>
+			<input type="text" name="lastname" placeholder="Nom" ng-model="user.lastname" required/>
 			<input type="email" name="email" placeholder="Email" ng-model="user.email" required/>
 			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="car.registration_number" required/>
 			<select ng-model="country" ng-options="item as item.label for item in countrylist"></select>
-			<button class="btn subscribe-btn" ng-click="submit()">ENREGISTRER</button>
+			<button class="btn subscribe-btn" ng-click="submit()">ENREGISTRER CE VEHICULE</button>
 			<ul class="dots turnon-{{currentPage}}">
 				<li></li>
 				<li></li>

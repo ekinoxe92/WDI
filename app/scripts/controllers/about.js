@@ -8,6 +8,7 @@
  * Controller of the wdiApp
  */
 angular.module('wdiApp')
-  .controller('AboutCtrl', function () {
+  .controller('AboutCtrl', function ($scope) {
+  	$scope.pageClass = 'about';
     
   });

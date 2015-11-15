@@ -8,15 +8,15 @@
 	</div>
 	<div class="wrapper-border">
 		<form class="subscribe-form">
-			<input type="email" name="email" placeholder="Email" ng-model="email"/>
-			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="plaque"/>
+			<input type="email" name="email" placeholder="Email" ng-model="email" required/>
+			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="plaque" required/>
 			<textarea name="message" placeholder="Votre message"></textarea>	
 			<ul class="dots turnon-{{currentPage}}">
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>
-			<button ng-click="submit()" class="btn witness-btn">ALERTER</button>
+			<button ng-click="submit()" class="btn witness-btn">ALERTER CE VEHICULE</button>
 		</form>
 	</div>
 </div>

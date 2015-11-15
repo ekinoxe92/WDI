@@ -10,4 +10,5 @@
 angular.module('wdiApp')
   .controller('WitnessCtrl', function ($scope) {
  	$scope.currentPage =  2;
+ 	$scope.pageClass = 'witness';
   });

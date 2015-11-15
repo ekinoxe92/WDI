@@ -8,10 +8,6 @@
  * Controller of the wdiApp
  */
 angular.module('wdiApp')
-  .controller('ContactCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ContactCtrl', function ($scope) {
+	$scope.pageClass = 'contact';
   });

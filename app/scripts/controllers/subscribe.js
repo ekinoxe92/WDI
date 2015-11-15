@@ -11,6 +11,7 @@
  .controller('SubscribeCtrl', function ($scope, $http) {
  	$scope.user = {};
  	$scope.currentPage =  1;
+ 	$scope.pageClass = 'subscribe';
 
  	$http.get('../data/country-list.json').then(function(success) {
  		$scope.countrylist = success.data.list;
