@@ -9,11 +9,18 @@
  */
 angular.module('wdiApp')
   .controller('HistoryCtrl', function ($scope, $http) {
+
  	$scope.currentPage =  3;
  	$scope.pageClass = 'history';
- 		/*$http.get('http://api.whodidit.fr/alerts?user[email]=huynh.pascal@gmail.com').then(function(success){
+
+ 	// trigger form data
+ 	$scope.submit = function(){
+ 		$http.get('http://api.whodidit.fr/alerts?user[email]='+ $scope.user.email).then(function(success){
  			console.log(success);
+ 			$scope.complete = true;
+ 			$scope.contact.message = "";
  		}, function(error){
- 			console.log('error');
- 		});*/
+ 			alert('Une erreur est survenue, veuillez recommencer !');
+ 		});
+ 	};
   });

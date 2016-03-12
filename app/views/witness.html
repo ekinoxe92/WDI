@@ -8,16 +8,18 @@
 		<span class="witness-logo"></span>
 	</div>
 	<div class="wrapper-border">
-		<form class="subscribe-form">
-			<input type="email" name="email" placeholder="Email" ng-model="email" required/>
-			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="plaque" required/>
-			<textarea name="message" placeholder="Votre message"></textarea>	
+		<form class="subscribe-form" ng-submit="submit()">
+			<input type="email" name="email" placeholder="Email" ng-model="user.email" required/>
+			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="car.registration_number" required/>
+			<textarea name="message" placeholder="Votre message" ng-model="alert.body" required></textarea>	
 			<ul class="dots turnon-{{currentPage}}">
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>
-			<button ng-click="submit()" class="btn witness-btn">ALERTER CE VEHICULE</button>
+			<button class="btn witness-btn">ALERTER CE VEHICULE</button>
 		</form>
 	</div>
 </div>
+
+<div class="congratulation" ng-show="complete" ng-click="complete = !complete"><div class="table"><div class="tr"><h2>Merci de votre aide<br /> Une message sera envoyé au propriétaire du véhicule !</h2></div></div></div>

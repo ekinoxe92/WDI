@@ -22,7 +22,7 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: 'beepbeep/www'
   };
 
   // Define the configuration for all the tasks
@@ -224,7 +224,7 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -452,6 +452,14 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+    exec: {
+      ios: {
+        cmd:'grunt build && cd beepbeep/ && cordova platform rm ios && cordova platform add ios && cordova build ios && open platforms/ios/HelloCordova.xcodeproj && cd ..'
+      },
+      android: {
+        cmd:'grunt build && cd beepbeep/ && cordova platform rm android && cordova platform add android && cordova build android && adb install -r platforms/android/build/outputs/apk/android-debug.apk && cd ..'
+      }
     }
   });
 
@@ -501,6 +509,12 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+
+  grunt.registerTask('ios', [
+    'build',
+    'exec:ios'
   ]);
 
   grunt.registerTask('default', [

@@ -17,6 +17,7 @@
 	min-width: 30%;
 	width: 80%;
 	height: 100%;
+	display: flex;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -35,7 +36,7 @@
 }
 
 .overlay {
-	&.inactive {		
+	&.inactive {
 		width: 20%;
 		background: rgba(0,0,0,0.3);
 		@include transition-property(background);

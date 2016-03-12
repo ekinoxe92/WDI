@@ -6,11 +6,12 @@
 	<div class="wrapper-center">
 		<span class="subscribe-logo"></span>
 	</div>
-	<div class="wrapper-border">
+	<div class="wrapper-border" ng-submit="submit()">
 		<form class="subscribe-form">
-			<input type="email" name="email" placeholder="Email" ng-model="email" required/>
-			<textarea name="message" placeholder="Votre message" required></textarea>	
-			<button ng-click="submit()" class="btn">ENVOYER MON MESSAGE</button>
+			<input type="email" name="email" placeholder="Email" ng-model="contact.email" required/>
+			<textarea name="message" placeholder="Votre message" ng-model="contact.message" required></textarea>	
+			<button class="btn">ENVOYER MON MESSAGE</button>
 		</form>
 	</div>	
 </div>
+<div class="congratulation" ng-show="complete" ng-click="complete = !complete"><div class="table"><div class="tr"><h2>Merci<br /> Nous vous répondrons dans les plus brefs délais.</h2></div></div></div>

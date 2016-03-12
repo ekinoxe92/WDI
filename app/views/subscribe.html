@@ -8,13 +8,12 @@
 		<span class="subscribe-logo"></span>
 	</div>
 	<div class="wrapper-border">
-		<form class="subscribe-form">
+		<form class="subscribe-form" ng-submit="submit()">
 			<input type="text" name="firstname" placeholder="Prénom" ng-model="user.firstname" required/>
 			<input type="text" name="lastname" placeholder="Nom" ng-model="user.lastname" required/>
 			<input type="email" name="email" placeholder="Email" ng-model="user.email" required/>
 			<input type="text" name="plaque" placeholder="Plaque d'immatriculation" ng-model="car.registration_number" required/>
-			<select ng-model="country" ng-options="item as item.label for item in countrylist"></select>
-			<button class="btn subscribe-btn" ng-click="submit()">ENREGISTRER CE VEHICULE</button>
+			<button class="btn subscribe-btn">ENREGISTRER CE VEHICULE</button>
 			<ul class="dots turnon-{{currentPage}}">
 				<li></li>
 				<li></li>
@@ -23,3 +22,4 @@
 		</form>
 	</div>
 </div>
+<div class="congratulation" ng-show="complete" ng-click="complete = !complete"><div class="table"><div class="tr"><h2>Merci {{user.firstname}},<br /> votre véhicule a bien été enregistré</h2></div></div></div>
